@@ -6172,3 +6172,489 @@ Client Name: SF03LA18TL.shipley.ac.uk
  resolution: 854 x 480
  time spent on site: 15.097 seconds
 
+Request Method: POST
+Request Params:{"width":"854","time":"6.205","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53391
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 22:57:41
+
+ resolution: 854 x 480
+ time spent on site: 6.205 seconds
+
+Request Method: POST
+Request Params:{"width":"854","time":"6.464","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53886
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 23:04:29
+
+ resolution: 854 x 480
+ time spent on site: 6.464 seconds
+
+Request Method: POST
+Request Params:{"width":"854","time":"0.139","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53886
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 23:04:30
+
+ resolution: 854 x 480
+ time spent on site: 0.139 seconds
+
+Request Method: POST
+Request Params:{"width":"854","time":"0.161","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53886
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 23:04:30
+
+ resolution: 854 x 480
+ time spent on site: 0.161 seconds
+
+Request Method: POST
+Request Params:{"width":"854","time":"0.175","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53886
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 23:04:30
+
+ resolution: 854 x 480
+ time spent on site: 0.175 seconds
+
+Request Method: POST
+Request Params:{"width":"854","time":"0.145","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53886
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 23:04:30
+
+ resolution: 854 x 480
+ time spent on site: 0.145 seconds
+
+Request Method: POST
+Request Params:{"width":"854","time":"0.192","height":"480","auth":"login","userid":"","password":"","sub":"Login"}
+User: 
+Cient IP: ::1
+Client Name: PC
+ Client Port: 53886
+ Client Platform: Windows
+ Client Accept Language: en-GB,en;q=0.9,en-US;q=0.8
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 10-11-2023 23:04:30
+
+ resolution: 854 x 480
+ time spent on site: 0.192 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234.","userid":"admin@admin.com","sub":"Register"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55004
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:27:18
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234","userid":"admin3@admin3.com","sub":"Register"}
+User: admin3@admin3.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55060
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:31:10
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc123456.T","userid":"admin3@admin3.com","sub":"Register"}
+User: admin3@admin3.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55201
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:31:54
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc123456.T","userid":"admin3@admin3.com","sub":"Register"}
+User: admin3@admin3.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55209
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:33:48
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc123456.T","userid":"admin3@admin3.com","sub":"Register"}
+User: admin3@admin3.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55262
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:38:54
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55272
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:41:11
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55280
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:43:38
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234565.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55281
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:44:15
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234565.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55292
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:45:30
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234565.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55293
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:45:50
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234565.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55311
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:49:00
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234565.","userid":"admin3@admin.com","sub":"Register"}
+User: admin3@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 55319
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 00:51:35
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"login","password":"Testacc1234.","userid":"admin@admin.com","sub":"Login"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 49786
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 10:19:49
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"login","password":"Testacc1234.","userid":"admin@admin.com","sub":"Login"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50558
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 11:47:20
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234","userid":"admin@admin.com","sub":"Register"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50559
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 11:47:50
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"login","password":"Testacc1234.","userid":"admin@admin.com","sub":"Login"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50566
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 11:48:23
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"reg","password":"Testacc1234.","userid":"admin@admin.com","sub":"Register"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50574
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/index.php
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 11:49:30
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"login","password":"Testacc1234.","userid":"admin@admin.com","sub":"Login"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50605
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 11:50:25
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"login","password":"Testacc1234.","userid":"admin@admin.com","sub":"Login"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50699
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 12:35:26
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+
+Request Method: POST
+Request Params:{"width":" 0","time":" 0","height":" 0","auth":"login","password":"Testacc1234.","userid":"admin@admin.com","sub":"Login"}
+User: admin@admin.com
+Cient IP: ::1
+Client Name: PC
+ Client Port: 50772
+ Client Platform: Windows
+ Client Accept Language: en-US,en;q=0.9
+ Client Script URL: http://localhost/Chat-Room/
+ Server Name: localhost
+ Server IP: ::1
+ Server Port: 80
+ Server Script Name: /Chat-Room/login.php
+ Server Software: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.2.4Current Date: 11-11-2023 12:54:58
+
+ resolution:  0 x  0
+ time spent on site:  0 seconds
+

@@ -1,6 +1,6 @@
 <?php
-// Start the session
 session_start();
+    $header = "";
     // Logging code
     // Get the type of request (GET or POST).
     $reqMethods = $_SERVER["REQUEST_METHOD"];
@@ -91,7 +91,7 @@ session_start();
     $username = "root";
     $password = "";
     $dbName = "login_db";
-
+    $dbTable = "users";
     // Create connection
     $conn = new mysqli($servername, $username, $password, $dbName);
     if ($conn->connect_error) {;
@@ -104,7 +104,7 @@ session_start();
     switch ($_POST['auth']){
         case "login":
             // Use prepared statement to query the database
-    $stmt = $conn->prepare("SELECT email, u_pass FROM logins WHERE email = ?");
+    $stmt = $conn->prepare("SELECT email, password FROM $dbTable WHERE email = ?");
     $stmt->bind_param("s", $uName);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -112,33 +112,23 @@ session_start();
     if ($result->num_rows > 0) {
         // output data of each row
         while ($row = $result->fetch_assoc()) {
-            $storedHashedPassword = $row["u_pass"];
+            $storedHashedPassword = $row["password"];
 
             // Verify the entered password against the stored hashed password
             if ((password_verify($uPass, $storedHashedPassword)) && ($uName == $row["email"]) ) {
                 $status = "loggedIn";
-                $_SESSION["status"] = $status;
-                $conn->close();
-				header("location:home.php");
-				exit();
-            } else {
-                $_SESSION["status"] = $status;
+                $header = "home.php";
+} else {
                 $status = "loggedOut";
                 $_SESSION['error'] = "Error: these details are incorrect. Please try again.";
-                header("location:index.php");
-				$conn->close();
-                exit();
-            }
-        }
+                $header = "index.php";
+			}
+    }
     } else {
         $status = "loggedOut";
         $_SESSION['error'] = "Error: these details are incorrect. Please try again.";
-        $_SESSION["status"] = $status;
-        header("location:index.php");
-		$conn->close();
-    
-        exit();
-    }
+        $header = "index.php";
+	}
     break;
     case "reg":
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -149,8 +139,7 @@ session_start();
             if ($securityError !== null) {
                 // Password is not secure, set session variable and redirect
                 $_SESSION['error'] = $securityError;
-                header("location:index.php");
-               exit();
+                $header = "index.php";
             }
              // Password is secure, you can continue with registration or other actions.
             else{
@@ -159,37 +148,35 @@ session_start();
         $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
         
         // Check if the email already exists in the database
-        $stmt = $conn->prepare("SELECT email FROM logins WHERE email = ?");
+        $stmt = $conn->prepare("SELECT email FROM $dbTable WHERE email = ?");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
-        
             if ($result->num_rows > 0){
             // Email already exists, handle this case as needed
             $_SESSION['error'] = "Error: this email is already registered. Please try again.";
-                header("location:register.php");
-                $conn->close();
-                exit();
-        } else {
-
+                $header = "index.php";
+         } else {
                 // Email and password don't exist, proceed to insert the new user
                 // Hash the password
                 // Insert the new user into the database
-                $stmt = $conn->prepare("INSERT INTO logins (email, u_pass) VALUES (?, ?)");
-                $stmt->bind_param("ss", $email, $hashedPassword);
+                $stmt = $conn->prepare("INSERT INTO $dbTable (username,email,password) VALUES (?, ?,?)");
+                $u = "mohammed";
+                $stmt->bind_param("sss",$u ,$email, $hashedPassword);
                  $stmt->execute();
-                    $_SESSION['status'] = "loggedIn";
-                    $conn->close();
-                    header("location:home.php");
-                
-                exit();
+                    $status = "loggedIn";
+                    $header = "home.php";
             }
         }       
             }           
     break;
 case "logout":
-    session_destroy(); 
-header("location:index.php");  
+    session_destroy();
+$header = "index.php";
+break;
+    }
+$_SESSION["status"] = $status;
+$conn->close();
+header("location:".$header);
 exit();
-    }   
 ?>

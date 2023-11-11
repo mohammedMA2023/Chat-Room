@@ -10,16 +10,8 @@
 
 input[type=submit]{
     text-align:center;width:35%;
-    position: absolute;
-
 }
 
 input[type=email] , input[type=password]{
     width:50%;
-}
-.parent { 
-    display:flex;
-}
-.child {
-    flex-basis: 100%;
 }
