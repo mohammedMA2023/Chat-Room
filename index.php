@@ -33,6 +33,10 @@
 		<br>
         </div>
 		<br>
+		<input id="uname" type="text" name="password" placeholder="Enter your password" name="uname">
+		<br>
+
+		<br>
 		Email:
 		<br>
 		<input type="email" name="userid" placeholder="Enter your email..."><br>

@@ -55,6 +55,7 @@ session_start();
 
     $current = file_get_contents($file);
     $uName = $_POST["userid"];
+    echo json_encode($_POST);
     $newLine = "Request Method: $reqMethods\n" . "Request Params:" . json_encode($_POST) . "\n" . "User: " . $uName . "\n" . "Cient IP: " . $ip . "\nClient Name: $clientName\n Client Port: $clientPort\n Client Platform: $platform\n Client Accept Language: $acceptLanguage\n Client Script URL: $clientScriptUrl\n Server Name: $serverName\n Server IP: $serverIp\n Server Port: $serverPort\n Server Script Name: $scriptName\n Server Software: $serverSoftware" . "Current Date: " . $date . "\n" .  "\n resolution: $res\n time spent on site: $time seconds" . "\r\n\n";
     $current = $current . $newLine;
     file_put_contents($file, $current);
@@ -177,6 +178,6 @@ break;
     }
 $_SESSION["status"] = $status;
 $conn->close();
-header("location:".$header);
-exit();
+//header("location:".$header);
+//exit();
 ?>
