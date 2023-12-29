@@ -1,64 +1,205 @@
+<?php
+ session_start();
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Business Casual - Start Bootstrap Theme</title>
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet" />
-        <!-- Core theme CSS (includes Bootstrap)-->
-    </head>
-    <body onload="start()">
-    
-    <div style="  position: absolute;
-  bottom: 10px;
-  width: 50%;
-  ">
-    <form method=""> 
-    <textarea id="w3review" name="w3review" rows="4" cols="50">
-</textarea>    
-    <button>Send</button>
-</div>
-    <?php
-    //include 'header.php';
-    
-    
-    
-    ?>    
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="js/scripts.js"></script>
-        <script>
-	
-	var startDate;
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+   <style>
+    body {
+      background-color: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-function stopTime() {
-  let startTime = startDate.getTime();
-  var dateNow = new Date();
-  var timeNow = dateNow.getTime();
-  var timediff = timeNow - startTime;
-  document.forms["form1"]["time"].value = timediff / 1000;
-  
+    .chat-container {
+ width:90%;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+      }
+
+    .chat-header {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      padding: 10px;
+    }
+
+    .message {
+      margin-bottom: 15px;
+      overflow: hidden;
+    }
+
+    .message .user {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .message .content {
+
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+    }
+
+    .message .time {
+      color: #888;
+      font-size: 12px;
+      float: right;
+    }
+
+      .chat-input {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px;
+      background-color: #fff;
+      z-index: 1000;
+    }
+
+    .input-group-addon,
+    .btn-send {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+    }
+  </style>
+</head>
+<body onload="load()">
+  <div id="con" class="container">
+    <div class="chat-container">
+      <div class="chat-header">
+        Chat Room
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <!-- More messages go here -->
+      </div>
+      <br>
+      <br>
+      <div id="end">
+      </div>
+      <div id="chat-input" class="chat-input">
+        <div class="input-group">
+          <textarea id="msg" class="form-control" placeholder="Type your message..."></textarea>
+          <div class="input-group-append">
+            <button onclick="send()" class="btn btn-send" type="button">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  function load() {
+    var element = document.getElementById("con");
+
+    // Assuming getMsg returns a Promise, you can use .then
+    getMsg().then(() => {
+        // After sending the message, scroll to the bottom of the screen
+        element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }).catch((error) => {
+        console.error("Error fetching messages:", error);
+    });
 }
 
-function start() {
-  startDate = new Date();
-}
+ function disp(jsn) {
 
-function getScreen() {
-  if (!startDate) {
-    start();
+  let uName = getCookie("userid")[1];
+    //alert(uName);
+  let obj = jsn; // Correct variable name
+let revs = document.getElementById("chat-messages");
+ let content = "";
+
+  let dispName;
+  let bg;
+  let c;
+
+  for (let i = 0; i < obj.length; i++) {
+  if (uName === obj[i]["username"]){
+    dispName = "You ("+uName+")";
+    bg = "#075E54";
+    c = "#ffffff";
   }
-  document.forms['form1']['width'].value = screen.width;
-  document.forms['form1']['height'].value = screen.height;
+  else{
+        dispName = obj[i]["username"];
+        bg = "#ddd";
+        c = "#000000";
+  }
+
+    content += `<div class="message">
+          <div class="user">`+dispName+`</div>
+          <div style="background-color:`+bg+`;`+`color:`+c+`;" class="content">` + obj[i]["message_text"] + `
+
+          </div>
+          <div class="time">` + obj[i]["timestamp"] + `</div>
+        </div>
+        `;
+}
+    revs.innerHTML = content;
+
+
+  }
+
+function move(){
+ var element = document.getElementById("con"); // Use document.documentElement to refer to the whole document
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+    }
+}
+function send(){
+    // After sending the message, scroll to the bottom of the screen
+    let msg = document.getElementById("msg").value;
+  if (msg){
+  let userIdValue = getCookie("userid")[0];
+  let uName = getCookie("userid")[1];
+  move();
+
+  fetch('http://192.168.0.203/api/db/mesg', {
+    method: 'POST',
+    body: JSON.stringify({uid: userIdValue,message:msg,uname:uName})
+  })
+}
 }
 
-	</script>
+function getMsg() {
+    // Return the fetch Promise directly
+    return fetch("http://192.168.0.203/api/db/getMsg")
+        .then(response => response.json())
+        .then(data => disp(data));
+}
+setInterval(getMsg,100);
 
-    </body>
+function getCookie(name){
+  let uId = <?php echo $_SESSION["userid"]?>;
+ return uId;
+
+
+
+}
+
+</script>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
 </html>

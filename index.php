@@ -29,12 +29,9 @@
 		<div id="uName" class="inputs mb-3" style="text-align:center;margin:5px;width:100%;visibility:hidden;">
 		Username:
 		<br>
-		<input id="uname" type="text" name="password" placeholder="Enter your password" name="uname"><br>
+		<input type="text" name="uname" placeholder="Enter your username..."><br>
 		<br>
         </div>
-		<br>
-		<input id="uname" type="text" name="password" placeholder="Enter your password" name="uname">
-		<br>
 
 		<br>
 		Email:
