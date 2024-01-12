@@ -123,7 +123,8 @@
 
  function disp(jsn) {
 
-  let uName = getCookie("userid")[1];
+  let uName = getCookie("userid")[0];
+  let uN = getCookie("userid")[1];
     //alert(uName);
   let obj = jsn; // Correct variable name
 let revs = document.getElementById("chat-messages");
@@ -134,8 +135,8 @@ let revs = document.getElementById("chat-messages");
   let c;
 
   for (let i = 0; i < obj.length; i++) {
-  if (uName === obj[i]["username"]){
-    dispName = "You ("+uName+")";
+  if (uName === obj[i]["user_id"]){
+    dispName = "You ("+uN+")";
     bg = "#075E54";
     c = "#ffffff";
   }
@@ -168,12 +169,40 @@ function move(){
 function send(){
     // After sending the message, scroll to the bottom of the screen
     let msg = document.getElementById("msg").value;
-  if (msg){
+    let mesgDiv = document.getElementById("chat-messages");
+
+
+    if (msg){
+      
+  let dispName = "You ("+getCookie("userid")[1] + ")";
+   let bg = "#075E54";
+    let c = "#ffffff";
+    const now = new Date();
+
+    const formattedTime = now.toLocaleString('en-GB', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+});
+let content = "";
+ 
+    content += `<div class="message">
+          <div class="user">`+dispName+`</div>
+          <div style="background-color:`+bg+`;`+`color:`+c+`;" class="content">` + msg  + `
+
+          </div>
+          <div class="time">` + formattedTime + `</div>
+        </div>
+        `;
+    mesgDiv.innerHTML += content;
   let userIdValue = getCookie("userid")[0];
   let uName = getCookie("userid")[1];
   move();
 
-  fetch('http://192.168.0.203/api/db/mesg', {
+  fetch('http://10.201.211.204/api/db/mesg', {
     method: 'POST',
     body: JSON.stringify({uid: userIdValue,message:msg,uname:uName})
   })
@@ -182,11 +211,11 @@ function send(){
 
 function getMsg() {
     // Return the fetch Promise directly
-    return fetch("http://192.168.0.203/api/db/getMsg")
+    return fetch("http://10.201.211.204/api/db/getMsg")
         .then(response => response.json())
         .then(data => disp(data));
 }
-setInterval(getMsg,100);
+setInterval(getMsg,5000);
 
 function getCookie(name){
   let uId = <?php echo $_SESSION["userid"]?>;
@@ -203,3 +232,5 @@ function getCookie(name){
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
