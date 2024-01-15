@@ -29,7 +29,7 @@
 		<div id="uName" class="inputs mb-3" style="text-align:center;margin:5px;width:100%;visibility:hidden;">
 		Username:
 		<br>
-		<input type="text" name="uname" placeholder="Enter your username..."><br>
+		<input type="text" name="uname" placeholder="Enter your username..." ><br>
 		<br>
         </div>
 
@@ -40,7 +40,7 @@
 
 		Password:
 		<br>
-		<input type="password" name="password" placeholder="Enter your password"><br>
+		<input type="password" name="password" placeholder="Enter your password" required><br>
 		<br>
 
 <div class="parent">
@@ -134,3 +134,78 @@ function getScreen() {
 </html>
 
 
+NICKS WORK
+
+<!-- login form-->
+<section class="projects-section bg-dark" id="">
+            <section class="page-section cta">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-9 mx-auto">
+                        <div class="cta-inner bg-faded text-center rounded">
+                            <h2 class="section-heading mb-5">
+                                <span class="section-heading-upper"> </span>
+                                <!-- <span class="section-heading-lower">Rate My Cake</span> -->
+                            </h2>
+                            
+                            <div style="display: inline-block; text-align: center;">
+                                <form action="logindb.php" method="post" enctype="multipart/form-data">
+
+                                <label for="uname"><b>Username</b></label>
+                                <input type="text" placeholder="Enter Username" name="username" required>
+                                <br>
+                                <label for="psw"><b>Password</b></label>
+                                <input type="password" placeholder="Enter Password" name="password" required>
+                                  <br>
+
+                                  <input style="width:100%;" type="submit" value="create account" />
+                                </form>
+                            </div>
+                            <?php  
+                              if ((isset($_SESSION["error"])) && ($_SESSION["error"])){
+                                echo $_SESSION["error"];
+                                $_SESSION["error"] = "";
+
+                              } 
+                            ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+PHP========================
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mistymountains";
+
+$uname = $_POST["username"];
+$pword = $_POST["password"];
+// $email = $_POST["email"];
+
+echo $uname;
+echo $pword;
+// echo $email;
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// $sql = "INSERT INTO userdb (username,password)
+// VALUES (?,?)";
+
+$stmt = $conn->prepare("INSERT INTO userdb (username,password)
+VALUES (?,?)");
+$stmt->bind_param("ss",$uname ,$pword);
+$stmt->execute();
+$conn->close();
+
+$header = "index.php";
+
+// header("location:".$header);
+// exit();
+?>
