@@ -231,10 +231,10 @@ function filterLatestAndAdditionalEntries(array1, array2) {
 
 
 function disp(jsn) {
- 
- 
+
+
  let obj = jsn; // Correct variable name
- 
+
  if (msgs.length === obj.length){
    return;
 
@@ -246,14 +246,15 @@ function disp(jsn) {
  }
  else if (obj.length > msgs.length){
   //let test = JSON.stringify(filterLatestAndAdditionalEntries(obj,msgs));
- //alert(test); 
+ //alert(test);
   let msgsLength = msgs.length - 1;
    //alert(msgsLength);
    let newArr = obj.slice(msgsLength);
    updateScreen(newArr);
    //alert(JSON.stringify(newArr));
+   alert(msgs);
    msgs = [...msgs, ...newArr];
-   alert(JSON.stringify(ms))
+   alert(JSON.stringify(newArr));
 
   alert(JSON.stringify(msgs));
 
@@ -309,14 +310,14 @@ function send(){
    mesgDiv.innerHTML += content;
  let userIdValue = getCookie("userid")[0];
  let uName = getCookie("userid")[1];
- 
+
  let newMsg = {"message_id":msgs[msgs.length - 1]["message_id"] + 1,"user_id":userIdValue,"message_text":msg,"username":uName,"timestamp":formattedTime}
 msgs.push(newMsg);
-alert(JSON.stringify(msgs[msgs.length - 1]));
+//alert(JSON.stringify(msgs[msgs.length - 1]));
  move();
 
 
- fetch('http://10.201.211.204/api/db/mesg', {
+ fetch('http://192.168.0.203/api/db/mesg', {
    method: 'POST',
    body: JSON.stringify({uid: userIdValue,message:msg,uname:uName})
  })
@@ -326,7 +327,7 @@ alert(JSON.stringify(msgs[msgs.length - 1]));
 
 function getMsg() {
    // Return the fetch Promise directly
-   return fetch("http://10.201.211.204/api/db/getMsg")
+   return fetch("http://192.168.0.203/api/db/getMsg")
        .then(response => response.json())
        .then(data => disp(data));
 }
@@ -353,4 +354,3 @@ return uId;
  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
-
